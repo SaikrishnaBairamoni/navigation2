@@ -43,7 +43,9 @@ RUN echo '\
 APT::Install-Recommends "0";\n\
 APT::Install-Suggests "0";\n\
 ' > /etc/apt/apt.conf.d/01norecommend
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED 
+ENV PIP_BREAK_SYSTEM_PACKAGES=1
+
 
 # install CI dependencies
 ARG RTI_NC_LICENSE_ACCEPTED=yes
