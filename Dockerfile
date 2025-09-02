@@ -43,7 +43,7 @@ RUN echo '\
 APT::Install-Recommends "0";\n\
 APT::Install-Suggests "0";\n\
 ' > /etc/apt/apt.conf.d/01norecommend
-ENV PYTHONUNBUFFERED 
+ENV PYTHONUNBUFFERED=1
 ENV PIP_BREAK_SYSTEM_PACKAGES=1
 
 
