@@ -26,6 +26,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
+            FROM_IMAGE=ros:humble
             UNDERLAY_MIXINS=release ccache lld
             OVERLAY_MIXINS=release ccache lld
             FAIL_ON_TEST_FAILURE=True
