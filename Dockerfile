@@ -54,6 +54,7 @@ RUN apt-get update && \
       lcov \
       lld \
       python3-pip \
+      nlohmann-json3-dev \
       ros-$ROS_DISTRO-rmw-fastrtps-cpp \
       ros-$ROS_DISTRO-rmw-connextdds \
       ros-$ROS_DISTRO-rmw-cyclonedds-cpp \
@@ -76,6 +77,7 @@ RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
       --from-paths src \
       --skip-keys " \
         slam_toolbox \
+        nlohmann-json \
         " \
       --ignore-src \
     && rm -rf /var/lib/apt/lists/*
