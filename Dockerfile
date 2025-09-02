@@ -55,6 +55,7 @@ RUN apt-get update && \
       lld \
       python3-pip \
       nlohmann-json3-dev \
+      libnanoflann-dev \
       ros-$ROS_DISTRO-rmw-fastrtps-cpp \
       ros-$ROS_DISTRO-rmw-connextdds \
       ros-$ROS_DISTRO-rmw-cyclonedds-cpp \
@@ -78,6 +79,7 @@ RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
       --skip-keys " \
         slam_toolbox \
         nlohmann-json \
+        lib-nanoflann \
         " \
       --ignore-src \
     && rm -rf /var/lib/apt/lists/*
@@ -104,6 +106,7 @@ RUN . $UNDERLAY_WS/install/setup.sh && \
       --skip-keys " \
         slam_toolbox \
         nlohmann-json \
+        lib-nanoflann \
         "\
       --ignore-src \
     && rm -rf /var/lib/apt/lists/*
