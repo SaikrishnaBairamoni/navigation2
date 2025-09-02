@@ -103,6 +103,7 @@ RUN . $UNDERLAY_WS/install/setup.sh && \
       --from-paths src \
       --skip-keys " \
         slam_toolbox \
+        nlohmann-json \
         "\
       --ignore-src \
     && rm -rf /var/lib/apt/lists/*
